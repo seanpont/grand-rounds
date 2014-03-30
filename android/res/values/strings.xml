@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_title">Grand Rounds</string>
+    <string name="main_subtitle">Presentation Aid and Quiz App</string>
+    <string name="main_presenting">Presenting</string>
+    <string name="main_attending">Attending</string>
+
+    <string name="sign_in_title">Please enter your name and email</string>
+    <string name="sign_in_name">Name</string>
+    <string name="sign_in_email">Email</string>
+    <string name="sign_in_submit">Continue</string>
+    <string name="sign_in_privacy_policy">Privacy policy</string>
+    <string name="alert_OK">Okay</string>
+    <string name="privacy_policy_title">Privacy Policy</string>
+    <string name="privacy_policy_body">Your email will be visible to other users. We will not contact you or otherwise distribute your email address.</string>
+    <string name="create_title">Please enter a title for this presentation</string>
+    <string name="create_submit">Continue</string>
+    <string name="create_hint">Presentation Title</string>
+
+</resources>

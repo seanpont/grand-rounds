@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/anatomy_illustration"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black80"/>
+
+    <TextView
+            android:id="@+id/sign_in_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_title"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:textColor="@color/white"
+            android:textSize="32dp"/>
+
+    <EditText
+            android:id="@+id/sign_in_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_in_title"
+            android:gravity="center"
+            android:background="@color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:inputType="textPersonName|textCapWords"
+            android:hint="@string/sign_in_name"/>
+
+    <EditText
+            android:id="@+id/sign_in_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:inputType="textEmailAddress"
+            android:layout_below="@+id/sign_in_name"
+            android:hint="@string/sign_in_email"/>
+
+    <Button
+            android:id="@+id/sign_in_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_submit"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_below="@id/sign_in_email"/>
+
+    <Button
+            android:id="@+id/sign_in_privacy_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:text="@string/sign_in_privacy_policy"/>
+
+</RelativeLayout>

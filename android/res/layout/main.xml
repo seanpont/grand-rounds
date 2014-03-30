@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/rembrandt_anatomy"
+            android:scaleType="centerCrop"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_gradient"/>
+
+    <TextView
+            android:id="@+id/main_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/main_title"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="42dp"
+            android:fontFamily=""/>
+
+    <TextView
+            android:id="@+id/main_subtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_title"
+            android:layout_marginTop="10dp"
+            android:text="@string/main_subtitle"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            android:gravity="center"
+            />
+
+    <LinearLayout
+            android:id="@+id/main_btn_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/main_btn_presenting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/main_presenting"
+                android:textColor="@android:color/white"
+                />
+
+        <Button
+                android:id="@+id/main_btn_attending"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/main_attending"
+                android:textColor="@android:color/white"
+                />
+
+    </LinearLayout>
+
+</RelativeLayout>
