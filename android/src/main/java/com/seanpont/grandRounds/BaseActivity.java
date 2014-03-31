@@ -9,10 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Window;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 
 public abstract class BaseActivity extends Activity {
 
@@ -40,6 +37,8 @@ public abstract class BaseActivity extends Activity {
     protected Button findButtonById(int viewId) { return (Button) findViewById(viewId); }
 
     protected EditText findEditTextById(int viewId) { return (EditText) findViewById(viewId); }
+
+    protected ListView findListViewById(int viewId) { return (ListView) findViewById(viewId); }
 
     // ===== ALERTS ==============================================================================================
 

@@ -6,6 +6,12 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.seanpont.grandRounds.api.Presentation;
+import com.seanpont.grandRounds.utils.TransitionUtils;
+
+import static com.firebase.client.Firebase.CompletionListener;
 
 /**
  *
@@ -46,6 +52,20 @@ public class CreatePresentationActivity extends BaseActivity implements TextWatc
         final String presentationTitle = getPresentationTitle();
         if (presentationTitle.isEmpty() || _creatingPresentation) return;
         _creatingPresentation = true;
-        app().createPresentation(presentationTitle);
+        createPresentation();
+    }
+
+    private void createPresentation() {
+        final Presentation presentation = new Presentation();
+        presentation.setPresenter(app().data().getUser());
+        presentation.setTitle(getPresentationTitle());
+        app().client().createPresentation(presentation, new CompletionListener() {
+            @Override public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+                app().data().setPresentation(presentation);
+                startActivity(PreparePresentationActivity.class);
+                TransitionUtils.overrideSlideTransition(activity());
+            }
+        });
+
     }
 }

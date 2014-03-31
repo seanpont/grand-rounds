@@ -4,13 +4,17 @@ import java.util.List;
 
 public class Presentation {
 
-    public static final int STATE_PENDING = 0;
-    public static final int STATE_IN_PROGRESS = 1;
-    public static final int STATE_COMPLETE = 2;
+    public static final int STATE_INITIALIZING = 0;
+    public static final int STATE_PENDING      = 1;
+    public static final int STATE_STARTED      = 2;
+    public static final int STATE_COMPLETE     = 3;
 
-    private int _state;
-    private int _case;
-    private User presenter;
+    private String     _name;
+    private int        _state = STATE_INITIALIZING;
+    private int        _currentCase = -1;
+    private String     _title;
+    private User       presenter;
+    private List<Case> _cases;
     private List<User> attendees;
 
     public int getState() {
@@ -19,11 +23,11 @@ public class Presentation {
     public void setState(int state) {
         _state = state;
     }
-    public int getCase() {
-        return _case;
+    public int getCurrentCase() {
+        return _currentCase;
     }
-    public void setCase(int aCase) {
-        _case = aCase;
+    public void setCurrentCase(int currentCase) {
+        _currentCase = currentCase;
     }
     public User getPresenter() {
         return presenter;
@@ -37,4 +41,10 @@ public class Presentation {
     public void setAttendees(List<User> attendees) {
         this.attendees = attendees;
     }
+    public void setTitle(String title) { _title = title; }
+    public String getTitle() { return _title; }
+    public void setName(String name) { _name = name; }
+    public String getName() { return _name; }
+    public void setCases(List<Case> cases) { _cases = cases; }
+    public List<Case> getCases() { return _cases; }
 }

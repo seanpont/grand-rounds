@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import com.seanpont.grandRounds.utils.TransitionUtils;
 
 import static com.seanpont.grandRounds.utils.StringUtils.isValidEmail;
 
@@ -46,6 +47,10 @@ public class SignInActivity extends BaseActivity implements TextWatcher, View.On
 
         afterTextChanged(null);
     }
+    @Override public void onBackPressed() {
+        super.onBackPressed();
+        TransitionUtils.overrideSlideBackTransition(this);
+    }
 
     // ===== TextWatcher ===============================================================================================
 
@@ -70,14 +75,17 @@ public class SignInActivity extends BaseActivity implements TextWatcher, View.On
         if (getName().isEmpty() || getEmail().isEmpty() || _isSubmitting) return;
         _isSubmitting = true;
         _submitBtn.setEnabled(false);
+
         app().signIn(getName(), getEmail());
 
         if (presenting()) {
             startActivity(CreatePresentationActivity.class);
+            TransitionUtils.overrideSlideTransition(activity());
         } else {
             toast(R.id.not_yet_implemented);
         }
     }
+
     private boolean presenting() {
         return getIntent().getBooleanExtra(PRESENTING, false);
     }

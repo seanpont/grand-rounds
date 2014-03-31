@@ -12,9 +12,14 @@
     <string name="sign_in_privacy_policy">Privacy policy</string>
     <string name="alert_OK">Okay</string>
     <string name="privacy_policy_title">Privacy Policy</string>
-    <string name="privacy_policy_body">Your email will be visible to other users. We will not contact you or otherwise distribute your email address.</string>
-    <string name="create_title">Please enter a title for this presentation</string>
+    <string name="privacy_policy_body">We won\'t email you special offers because we have none. This is a teaching aid, not a shopping catalogue.</string>
+    <string name="create_title">Enter a title for this presentation</string>
     <string name="create_submit">Continue</string>
     <string name="create_hint">Presentation Title</string>
+    <string name="prepare_title">Enter a description and diagnosis for each case to be presented</string>
+    <string name="prepare_case_desc">Case description (ie Female, 42, patellofemoral dislocation)</string>
+    <string name="prepare_add_case">Add another case</string>
+    <string name="prepare_complete">I\'m done</string>
+    <string name="prepare_case_diagnosis">Diagnosis</string>
 
 </resources>
